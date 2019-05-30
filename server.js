@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 
+// Set db
+require('./data/reddit-db');
+
 mongoose.connect('mongodb://localhost/reddit', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: true }))
