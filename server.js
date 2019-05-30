@@ -4,10 +4,12 @@ const port = 3000
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 
 mongoose.connect('mongodb://localhost/reddit', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(expressValidator())
 app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
