@@ -1,5 +1,12 @@
-<h1>Posts</h1>
-{{#each posts}}
-    <h1>{{this.title}}</h1>
-    <p>{{this.body}}</p>
-{{/each}}
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <ul>
+            {{#each posts}}
+                <li class="list-group-item">
+                    <div class="lead">{{this.title}}</div>
+                    <a href="{{this.url}}" target="_blank">{{this.url}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
