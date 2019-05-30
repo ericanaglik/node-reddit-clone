@@ -1,3 +1,19 @@
-<form>
-    This is where the form will go yee haw
+<form method="POST" action="/posts">
+  <fieldset>
+    <legend> New Post</legend>
+    {{!-- title --}}
+    <p>
+      <label for="title"> title </label>
+      <input type="text" name="title" />
+    </p>
+    {{!-- body --}}
+    <p>
+      <label for="body"> body </label>
+      <input type="text" name="body" />
+    </p>
+    {{!-- submit button --}}
+    <p>
+      <button type="submit"> Save Post </button>
+    </p>
+  </fieldset>
 </form>
