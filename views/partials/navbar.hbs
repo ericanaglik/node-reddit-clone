@@ -1,2 +1,18 @@
-<a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
-<a href="/">Reddit.js</a>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="http://i65.tinypic.com/ay7vcz.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Reddit
+  </a>
+  
+  {{#if currentUser}}
+    <a href="/logout">Logout</a>
+  {{else}}
+    <a href="/login">Login</a>
+    <a href="/sign-up">Sign Up</a>
+  {{/if}}
+
+  {{#if currentUser}}
+    <a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
+  {{/if}}
+</nav>
