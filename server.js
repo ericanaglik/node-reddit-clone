@@ -1,10 +1,14 @@
+require('dotenv').config();
 const express = require('express')
 const app = express()
 const port = 3000
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');
+const expressValidator = require('express-validator')
+var cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
+app.use(cookieParser()); 
 
 mongoose.connect('mongodb://localhost/reddit', { useNewUrlParser: true });
 
