@@ -1,4 +1,5 @@
-const Comment = require('../models/comment');
+const comment = new Comment(req.body);
+comment.author = req.user._id;
 
 module.exports = function(app) {
     // CREATE Comment
