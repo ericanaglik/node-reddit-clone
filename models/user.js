@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
-npm install cookie-parser jsonwebtoken -s
 const UserSchema = new Schema({
   createdAt: { type: Date },
   updatedAt: { type: Date },
